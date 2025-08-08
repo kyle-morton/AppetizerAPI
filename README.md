@@ -1,5 +1,7 @@
 # AppetizersAPI
 
+Deployed at https://appetizers.azurewebsites.net/api/appetizers
+
 This is a simple ASP.NET Core Web API that returns a hardcoded list of appetizer data at the endpoint `/api/appetizers`.
 
 ## How to Run
