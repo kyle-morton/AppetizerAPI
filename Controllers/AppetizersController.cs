@@ -153,7 +153,9 @@ namespace AppetizersAPI.Controllers
                     imageURL = "https://placehold.co/600x400?text=Mini+Crab+Cakes"
                 }
             };
-            return Ok(appetizers);
+            return Ok(new {
+                request = appetizers
+            });
         }
     }
 }
