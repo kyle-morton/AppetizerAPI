@@ -7,10 +7,10 @@ namespace AppetizersAPI.Controllers
     [Route("api/[controller]")]
     public class AppetizersController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Get()
-        {
-            var appetizers = new List<object>
+
+        #region DATA
+
+        var appetizers = new List<object>
             {
                 new {
                     name = "Asian Flank Steak",
@@ -153,6 +153,14 @@ namespace AppetizersAPI.Controllers
                     imageURL = "https://placehold.co/600x400?text=Mini+Crab+Cakes"
                 }
             };
+
+        #endregion
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            Task.Delay(1000).Wait(); // Simulating a delay for demonstration purposes
+            
             return Ok(new {
                 request = appetizers
             });
