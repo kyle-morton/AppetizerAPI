@@ -15,6 +15,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapControllers(); // <-- Add this
+app.MapControllers(); 
+
+// Enable static files
+app.UseStaticFiles();
 
 app.Run();
