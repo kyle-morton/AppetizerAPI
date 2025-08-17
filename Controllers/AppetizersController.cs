@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualBasic;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+using AppetizersAPI.Models;
 
-namespace AppetizersAPI.Controllers
-{
+namespace AppetizersAPI.Controllers;
+
     [ApiController]
     [Route("api/[controller]")]
     public class AppetizersController : ControllerBase
@@ -117,4 +115,3 @@ namespace AppetizersAPI.Controllers
         };
 
     }
-}

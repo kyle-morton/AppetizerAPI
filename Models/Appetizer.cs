@@ -1,4 +1,4 @@
-namespace AppetizersAPI;
+namespace AppetizersAPI.Models;
 
 public class Appetizer
 {
