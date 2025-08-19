@@ -1,10 +1,19 @@
+using AppetizerAPI.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Add EF Core with SQLite
+builder.Services.AddDbContext<AppetizerAPI.AppetizerDbContext>(options =>
+    options.UseSqlite("Data Source=appetizers.db"));
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
