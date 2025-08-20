@@ -30,19 +30,21 @@ public class UserController : ControllerBase
             return Unauthorized();
         }
 
-        await _userService.CreateUser(user);
+        user = await _userService.CreateUser(user);
 
         return Ok(user);
     }
 
     [HttpPost]
     [Route("Update")]
-    public IActionResult UpdateUser()
+    public async Task<IActionResult> UpdateUser()
     {
         if (!IsAuthorized())
         {
             return Unauthorized();
         }
+
+        // await _userService.UpdateUser();
 
         return Ok();
     }

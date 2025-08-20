@@ -12,6 +12,7 @@ builder.Services.AddDbContext<AppetizerAPI.AppetizerDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Configuration.AddUserSecrets<Program>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 
